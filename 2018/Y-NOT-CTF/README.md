@@ -10,7 +10,7 @@ and there seemed to be a string before the PWD like it was a command and then th
 
 SCAPY seemed the only way forward.
 
-After a little bit of feedling, and the results of the command HELP.
+After a little bit of fidling, and the results of the command HELP.
 Here was the final answer to the flag
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2018/Y-NOT-CTF/writeup2.png)
