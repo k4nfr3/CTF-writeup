@@ -12,9 +12,10 @@ Ah wouah ... a nice animation shows snow flakes falling and then a Santa saying 
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_telnet2.png)
 
+A nice animation show from time to time a letter popping up. 
+
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_telnet.png)
 
-A nice animation show from time to time a letter popping up. 
 A WireShark sniff of the traffic / Follow TCP stream produce the following Data stream
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_wireshark.png)
