@@ -31,13 +31,5 @@ After a bit of guessing we enter the username santa and are able to login with t
 
 Yes, we got the flag 
 
-__________________________________________________<br/>
- ___   _   _  _ _____ _   ___   ___ _      _   ___ <br/>
-/ __| /_\ | \| |_   _/_\ / __| | __| |    /_\ / __|<br/>
-\__ \/ _ \| .` | | |/ _ \\__ \ | _|| |__ / _ \ (_ |<br/>
-|___/_/ \_\_|\_| |_/_/ \_\___/ |_| |____/_/ \_\___|<br/>
-                                                   
-Congratulations! Well done! Here you go:<br/>
-⚑ HV18-PORT-scan-sARE-essn-tial ⚑<br/>
-Cheers @avarx_<br/>
-__________________________________________________<br/>
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_flag.png)
+
