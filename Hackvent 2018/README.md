@@ -5,7 +5,9 @@ A scan of the machine shows the result.
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_scan.png)
 
 It shoes a FTP and a Telnet service open which has not yet been part of any day challenge. Interesting.
+
 Let's start with the Telnet.
+
 Ah wouah ... a nice animation shows snow flakes falling and then a Santa saying he has no flag for us ...
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/Hackvent%202018/hidden_telnet2.png)
