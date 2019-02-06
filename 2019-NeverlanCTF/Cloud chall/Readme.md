@@ -7,7 +7,7 @@ Starting point : http://www.neverlanctf.cloud/
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-NeverlanCTF/start.jpg)
 
-Here is the result of Subli3ster
+Here is the result of Sublist3r
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-NeverlanCTF/screen1.jpg)
 
 opening : http://level2-e8a0ed21fc6fcc73b90895b4a2cdb120dca.neverlanctf.cloud/
