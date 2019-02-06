@@ -1,4 +1,4 @@
-Sorry but this is an incomplete write-up.
+Sorry but this is an **incomplete** write-up.
 
 I'm putting it up in the hope that somebody will help complete it as I'm really interested to know 
 how I should have finished that challenge.
