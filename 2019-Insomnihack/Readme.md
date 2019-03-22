@@ -14,9 +14,9 @@ sudo python3 server.py
 
 wait max 10min
 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/Fakessh_1.jpg)
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/fakessh_1.jpg)
 
 ssh -l svc-tenable-linux 10.13.37.99
 password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/Fakessh_2.jpg)
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/fakessh_2.jpg)
