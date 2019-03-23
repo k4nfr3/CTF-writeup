@@ -1,4 +1,4 @@
-[create an anchor](#knockknock)
+(#knockknock)
 KnockKnock
 =====================================
 It was not about attacking, but listening on the laptop.
