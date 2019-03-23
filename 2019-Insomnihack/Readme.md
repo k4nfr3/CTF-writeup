@@ -27,6 +27,10 @@ password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
 Net1
 
+it is supposed to happen between port TCP3000-4000
+a quick : nmap -Pn -p 3000-4000 10.13.37.99
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net00.jpg)
+
 
 Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data
 
