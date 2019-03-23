@@ -26,7 +26,7 @@ password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
 ==============
 
-Net1
+(#Net1)
 
 it is supposed to happen between port TCP3000-4000
 a quick : nmap -Pn -p 3000-4000 10.13.37.99
