@@ -35,16 +35,14 @@ ok, Let's try some Python Scapy with TCP-Syn Data
 from scapy.all import *
 
 def main(command):
-
-    while True:<br/>
-    
-        # build the TCPSYN packet with the command as the payload<br/>
-        pinger = IP(dst="10.13.37.98")<br/>
+    while True:\
+        # build the TCPSYN packet with the command as the payload\
+        pinger = IP(dst="10.13.37.98")\
         SYN = TCP(sport=6666, dport=3258, flags='S', seq=1000)<br/>
         xsyn = pinger / SYN / command<br/>
         send(xsyn)<br/>
-if __name__ == "__main__":<br/>
-    main(ls -la)<br/>
+if __name__ == "__main__":\
+    main(ls -la)\
  - - - - - - - - - - - -  
 Trying to send some commands but nothing back from the server.
 
