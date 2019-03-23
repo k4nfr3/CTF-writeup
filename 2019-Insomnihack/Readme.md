@@ -16,12 +16,12 @@ sudo python3 server.py
 
 wait max 10min
 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/fakessh_1.jpg)
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_1.jpg)
 
 ssh -l svc-tenable-linux 10.13.37.99
 password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/fakessh_2.jpg)
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_2.jpg)
 
 ================================================================================================================================
 Net1
@@ -52,7 +52,7 @@ main(SyN ls -la)
 final command : main(SyN cat ./secret/me/not/flag.txt)
 
 to find flag 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/Net1.jpg)
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net1.jpg)
 
 
 
