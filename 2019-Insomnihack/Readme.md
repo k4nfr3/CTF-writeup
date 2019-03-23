@@ -58,7 +58,7 @@ nc to the server
 ok so maybe stdout is closed  
 but **cat flag 2>&1** doesn't work either    
 so maybe stderr is also closed  
-let's redirect let's redirect all to stdin  
+let's redirect stdout to stdin  
 **cat flag 1>&0**    
 We are on the good track but we are missing something still.  
 The file had a carriage return (\r), and only the end of the file was sent back  
