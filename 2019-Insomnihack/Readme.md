@@ -34,7 +34,7 @@ a quick : nmap -Pn -p 3000-4000 10.13.37.99
 
 Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data  
 
-ok, Let's try some Python Scapy with TCP-Syn Data  
+ok, Let's try some Python Scapy with TCP-Syn Data  and in another window a tcpdump -w dump.pcap port 3258  
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net0.jpg)
 
