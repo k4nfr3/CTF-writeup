@@ -39,8 +39,10 @@ ok, Let's try some Python Scapy with TCP-Syn Data
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net0.jpg)
 
 Trying to send some commands but nothing back from the server.  
+The goal was to send starting with just one letter.  
+When receiving the wrong password, no answer. But sending a truncated password : for example Sy, the server would have returned with an answer of 'rx truncated' in the SYN-ACK packet.  
 
-Hint : We got the password "SyN" at 1am  
+Hint got released at 1am : Password was "SyN"  
 
 Ok, let's send some commands  
 main(SyN ls -la)  
