@@ -51,10 +51,11 @@ to find flag
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net1.jpg)
 
 
+
 # mybrokenbash
 
-nc to the server  
-**cat flag** return cat flag  
+nc server 1337    
+Let's send the command **cat flag** but we get cat flag in return  
 ok so maybe stdout is closed  
 but **cat flag 2>&1** doesn't work either    
 so maybe stderr is also closed  
