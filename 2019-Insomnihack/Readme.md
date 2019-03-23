@@ -1,56 +1,68 @@
-# Knockknock
+Knockknock
+=====================================
+It was not about attacking, but listening on the laptop.
+There was a connection to port 22 from the server 10.13.37.99
+Let's install a FakeSSH serveur :
+git clone https://github.com/tylermenezes/FakeSSH
 
-It was not about attacking, but listening on the laptop.  
-There was a connection to port 22 from the server 10.13.37.99  
-Let's install a FakeSSH serveur :  
-git clone https://github.com/tylermenezes/FakeSSH  
+sudo pip install paramiko
 
-sudo pip install paramiko  
+cd FakeSSH
+cp ./data/config.sample.json ./data/config.json
+ssh-keygen -f ./data/rsa -m 'PEM' 
+set no password
 
-cd FakeSSH  
-cp ./data/config.sample.json ./data/config.json  
-ssh-keygen -f ./data/rsa -m 'PEM'  
-set no password  
+sudo python3 server.py
 
-sudo python3 server.py  
-
-wait max 10min  
+wait max 10min
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_1.jpg)
 
-ssh -l svc-tenable-linux 10.13.37.99  
-password = $\mx3i#u0@%6d@8fk^&^x*ntw2m  
+ssh -l svc-tenable-linux 10.13.37.99
+password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_2.jpg)
 
+==============
 
-# Net1
+Net1
 
-it is supposed to happen between port TCP3000-4000  
-a quick : nmap -Pn -p 3000-4000 10.13.37.99  
+it is supposed to happen between port TCP3000-4000
+a quick : nmap -Pn -p 3000-4000 10.13.37.99
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net00.jpg)
 
 
-Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data  
+Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data
 
-ok, Let's try some Python Scapy with TCP-Syn Data  and in another window a tcpdump -w dump.pcap port 3258  
+ok, Let's try some Python Scapy with TCP-Syn Data
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net0.jpg)
 
-Trying to send some commands but nothing back from the server.  
-The goal was to send starting with just one letter.  
-When receiving the wrong password, no answer. But sending a truncated password : for example Sy, the server would have returned with an answer of 'rx truncated' in the SYN-ACK packet.  
+Trying to send some commands but nothing back from the server.
 
-Hint got released at 1am : Password was "SyN"  
+Hint : We got the password "SyN" at 1am
 
-Ok, let's send some commands  
-main(SyN ls -la)  
-....  
-final command : main(SyN cat ./secret/me/not/flag.txt)  
+Ok, let's send some commands
+main(SyN ls -la)
+....
+final command : main(SyN cat ./secret/me/not/flag.txt)
 
-
+to find flag 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net1.jpg)
 
 
+# mybrokenbash
 
+nc to the server  
+**cat flag** return cat flag  
+ok so maybe stdout is closed  
+but **cat flag 2>&1** doesn't work either    
+so maybe stderr is also closed  
+let's redirect let's redirect all to stdin  
+**cat flag 1>&0**    
+We are on the good track but we are missing something still.  
+The file had a carriage return (\r), and only the end of the file was sent back  
+One had to find/know that cat has options.  
+** cat -A** = show-all
+Final command to show the flag was ** cat -A flag 1>&0**
 
