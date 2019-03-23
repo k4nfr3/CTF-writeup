@@ -1,9 +1,9 @@
 Knockknock
 =====================================
-It was not about attacking, but listening on the laptop.
-There was a connection to port 22 from the server 10.13.37.99
-Let's install a FakeSSH serveur :
-git clone https://github.com/tylermenezes/FakeSSH
+It was not about attacking, but listening on the laptop.  
+There was a connection to port 22 from the server 10.13.37.99  
+Let's install a FakeSSH serveur :  
+git clone https://github.com/tylermenezes/FakeSSH  
 
 sudo pip install paramiko  
 
