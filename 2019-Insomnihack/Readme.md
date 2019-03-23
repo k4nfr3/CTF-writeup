@@ -23,14 +23,15 @@ password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_2.jpg)
 
+==============
 
 Net1
-==============
+
 
 Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data
 
 ok, Let's try some Python Scapy with TCP-Syn Data
-===========================
+- - - - - - - - - 
 from scapy.all import *
 def main(command):
     while True:
@@ -41,7 +42,7 @@ def main(command):
         send(xsyn)
 if __name__ == "__main__":
     main(ls -la)
- ====================================   
+ - - - - - - - - - - - -  
 Trying to send some commands but nothing back from the server.
 
 Hint : We got the password "SyN" at 1am
