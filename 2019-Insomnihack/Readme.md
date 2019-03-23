@@ -31,19 +31,9 @@ Net1
 Hint 2 : RFC741x => RFC7413 = Use TCP SYN Data
 
 ok, Let's try some Python Scapy with TCP-Syn Data
-- - - - - - - - - 
-from scapy.all import *
 
-def main(command):
-    while True:\
-        # build the TCPSYN packet with the command as the payload\
-        pinger = IP(dst="10.13.37.98")\
-        SYN = TCP(sport=6666, dport=3258, flags='S', seq=1000)<br/>
-        xsyn = pinger / SYN / command<br/>
-        send(xsyn)<br/>
-if __name__ == "__main__":\
-    main(ls -la)\
- - - - - - - - - - - - -  
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/Net0.jpg)
+
 Trying to send some commands but nothing back from the server.
 
 Hint : We got the password "SyN" at 1am
