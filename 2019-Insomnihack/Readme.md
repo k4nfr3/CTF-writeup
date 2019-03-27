@@ -111,6 +111,8 @@ Great, let's do the same on the dumped memory from Volatility and search for thi
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton4.jpg)
 
+The NTLM hash to crack is 65FB3480 14C7B62A 100AF97E EC0B6221  
+And we know from the chall definition that it is **INS{xxxxxxx}** (7 chars to find)  
 
 
 
