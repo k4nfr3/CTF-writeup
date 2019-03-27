@@ -116,8 +116,9 @@ Great, let's do the same on the dumped memory from Volatility and search for thi
 The NTLM hash to crack is 65FB3480 14C7B62A 100AF97E EC0B6221  
 And we know from the chall definition that it is **INS{xxxxxxx}** (7 chars to find)  
 
-John **john --format=nt -mask=INS{?1?1?1?1?1?1?1} -1=?l?u?d ./myhash.txt**  
-Hashcat64 **hashcat64 --force hash.txt -m 1000 -a 3 INS{?1?1?1?1?1?1?1} -1 ?l?u?d**  
+Let's bruteforce the hash:  
+John:**john --format=nt -mask=INS{?1?1?1?1?1?1?1} -1=?l?u?d ./myhash.txt**  
+Hashcat: **hashcat64 --session skeleton hash.txt -m 1000 -a 3 INS{?1?1?1?1?1?1?1} -1 ?l?u?d**  
 
 
 
