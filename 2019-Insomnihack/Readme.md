@@ -97,13 +97,17 @@ We download the memory dump file and analyse it with Volatility.
 Now we need to compare the function been run on a Domain Controller with the original version of Mimikatz.  
 **mimikatz**  
 **privilege::debug**    
-**misc::skeleton  **  
+**misc::skeleton**  
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2bb.jpg)
 
-![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2c.jpg)
-
+Let's dump ou process to analyse how the original mimikatz has write the NTLM hash in the memory.  
+We can use many tools, but I use **hexedit lsass_post.DMP**  
+And search for hex **60ba4f**  (Ctrl-S)
+We can see the NTLM hash with a structure around it **C7 44 24 xx** between each part. (In blue the hash, orange the repeated pattern).  
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton3.jpg)
+
+Great, let's do the same on the dumped memory from Volatility and search for this pattern **C7 44 24**  
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton4.jpg)
 
