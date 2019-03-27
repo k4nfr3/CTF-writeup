@@ -95,9 +95,10 @@ We download the memory dump file and analyse it with Volatility.
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2b.jpg)
 
 Now we need to compare the function been run on a Domain Controller with the original version of Mimikatz.  
-**mimikatz  
-privilege::debug  
-misc::skeleton  **
+**mimikatz**  
+**privilege::debug**    
+**misc::skeleton  **  
+
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2bb.jpg)
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2c.jpg)
