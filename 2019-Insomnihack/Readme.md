@@ -94,15 +94,16 @@ We download the memory dump file and analyse it with Volatility.
 **python vol.py -f memory.vmem --profile=Win2016x64_14393 -p 588 memdump -D ./dump.**
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2b.jpg)
 
-Now we need to compare the function been run on a Domain Controller with the original version of Mimikatz.  
+Now we need to find how this alteration of this skeleton function has left traces in the memory.  
+To find this, we use a standard Domain Controller and apply the function with the original version of Mimikatz.  
 **mimikatz**  
 **privilege::debug**    
 **misc::skeleton**  
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2bb.jpg)
 
-Let's dump ou process to analyse how the original mimikatz has write the NTLM hash in the memory.  
-We can use many tools, but I use **hexedit lsass_post.DMP**  
+After dumping the memory of the lsass process, let's analyse how the original mimikatz has writen the NTLM hash in the memory.  
+We can use many tools, but here we use **hexedit lsass_post.DMP**  
 And search for out hash starting with **60ba4f**  (Ctrl-S)
 We can see the NTLM hash with a structure around it **C7 44 24 xx** between each part.  
 (In blue the hash, orange the repeated pattern).    
