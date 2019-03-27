@@ -1,5 +1,5 @@
-Knockknock
-=====================================
+# Knockknock
+
 It was not about attacking, but listening on the laptop.
 There was a connection to port 22 from the server 10.13.37.99
 Let's install a FakeSSH serveur :
@@ -23,9 +23,7 @@ password = $\mx3i#u0@%6d@8fk^&^x*ntw2m
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/fakessh_2.jpg)
 
-==============
-
-Net1
+# Net1
 
 it is supposed to happen between port TCP3000-4000
 a quick : nmap -Pn -p 3000-4000 10.13.37.99
