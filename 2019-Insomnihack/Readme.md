@@ -67,14 +67,36 @@ One had to find/know that cat has options.
 ** cat -A** = show-all
 Final command to show the flag was ** cat -A flag 1>&0**
 
+
+
 # Skeleton in the closet
 
-We download the dump file  
+After searching a bit, we found the reference of the Skeleton Misc function of the well known Gentil Kiwi Mimikatz.
+We find from the documentation, this function will patch the process and a skeleton password enabling any username work with a pre-defined password.  
+By default, the password is : **mimikatz**  
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton0b.jpg)
+We can see from the source code of mimikatz this NTML password in little indian format.  
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton0.jpg)
+
+The definition of the chall, is that a personalized version of mimikatz has been used. So we need to find the password which has been encoded in his customized version.  
+
+We download the memory dump file.  
+
+**python vol.py -f memory.vmem imageinfo.** To find the OS.  
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton1.jpg)
 
+**python vol.py -f memory.vmem --profile=Win2016x64_14393 pslist.** To find the process running.    
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2.jpg)
 
+**python vol.py -f memory.vmem --profile=Win2016x64_14393 -p 588 memdump -D ./dump.**
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2b.jpg)
+
+Now we need to compare the function been run on a Domain Controller with the original version of Mimikatz.
+**mimikatz  
+privilege::debug  
+misc::skeleton  **
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2bb.jpg)
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2c.jpg)
 
