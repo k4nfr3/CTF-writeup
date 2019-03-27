@@ -120,7 +120,8 @@ And we know from the chall definition that it is **INS{xxxxxxx}** (7 chars to fi
 
 Let's bruteforce the hash:  
 John:**john --format=nt -mask=INS{?1?1?1?1?1?1?1} -1=?l?u?d ./myhash.txt**  
-Hashcat: **hashcat64 --session skeleton hash.txt -m 1000 -a 3 INS{?1?1?1?1?1?1?1} -1 ?l?u?d**  
+Hashcat: **hashcat64 --session skeleton hash.txt -m 1000 -a 3 INS{?1?1?1?1?1?1?1} -1 ?l?u?d**    
 
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton5.jpg)
 
 
