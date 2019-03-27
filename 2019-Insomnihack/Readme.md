@@ -103,8 +103,9 @@ Now we need to compare the function been run on a Domain Controller with the ori
 
 Let's dump ou process to analyse how the original mimikatz has write the NTLM hash in the memory.  
 We can use many tools, but I use **hexedit lsass_post.DMP**  
-And search for hex **60ba4f**  (Ctrl-S)
-We can see the NTLM hash with a structure around it **C7 44 24 xx** between each part. (In blue the hash, orange the repeated pattern).  
+And search for out hash starting with **60ba4f**  (Ctrl-S)
+We can see the NTLM hash with a structure around it **C7 44 24 xx** between each part.  
+(In blue the hash, orange the repeated pattern).    
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton3.jpg)
 
 Great, let's do the same on the dumped memory from Volatility and search for this pattern **C7 44 24**  
@@ -114,6 +115,8 @@ Great, let's do the same on the dumped memory from Volatility and search for thi
 The NTLM hash to crack is 65FB3480 14C7B62A 100AF97E EC0B6221  
 And we know from the chall definition that it is **INS{xxxxxxx}** (7 chars to find)  
 
+John **john --format=nt -mask=INS{?1?1?1?1?1?1?1} -1=?l?u?d ./myhash.txt**  
+Hashcat64 **hashcat64 --force hash.txt -m 1000 -a 3 INS{?1?1?1?1?1?1?1} -1 ?l?u?d**  
 
 
 
