@@ -69,6 +69,8 @@ Final command to show the flag was ** cat -A flag 1>&0**
 
 # Skeleton in the closet
 
+https://download.scrt.local/insomnihack2019/skeleton-in-the-closet.zip
+
 After searching a bit, we found the reference of the Skeleton Misc function of the well known Gentil Kiwi Mimikatz.
 https://github.com/gentilkiwi/mimikatz  
 We find from the documentation, this function will patch the LSASS process and adds a super password which will work for any username used !   
