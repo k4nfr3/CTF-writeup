@@ -67,3 +67,22 @@ One had to find/know that cat has options.
 ** cat -A** = show-all
 Final command to show the flag was ** cat -A flag 1>&0**
 
+# Skeleton in the closet
+
+We download the dump file  
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton1.jpg)
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2.jpg)
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2b.jpg)
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton2c.jpg)
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton3.jpg)
+
+![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton4.jpg)
+
+
+
+
+
