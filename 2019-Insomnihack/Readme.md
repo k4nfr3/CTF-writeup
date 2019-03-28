@@ -78,7 +78,7 @@ By default, the password is : **mimikatz**
 The NTLM hash of mimikatz is :  
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton0b.jpg)  
 
-We can see from the source code of mimikatz this NTML password in little indian format.  
+We can see from the source code of mimikatz this NTML password in little endian format.  
 
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton0.jpg)  
 
