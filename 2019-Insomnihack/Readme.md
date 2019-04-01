@@ -71,9 +71,9 @@ Final command to show the flag was ** cat -A flag 1>&0**
 
 https://download.scrt.local/insomnihack2019/SiC_8b47589556efae17471bbb768e25b525.zip
 
-After searching a bit, we found the reference of the Skeleton Misc function of the well known Gentil Kiwi Mimikatz.
+After searching a bit, we found the reference of the Skeleton Misc function of the well known Mimikatz of Benjamin Delpy.
 https://github.com/gentilkiwi/mimikatz  
-We find from the documentation, this function will patch the LSASS process and adds a super password which will work for any username used !   
+We find from the documentation, this function will somehow patch the LSASS process and adds a super password which will work for any username used !   
 By default, the password is : **mimikatz**  
 The NTLM hash of mimikatz is :  
 ![](https://github.com/k4nfr3/CTF-writeup/blob/master/2019-Insomnihack/skeleton0b.jpg)  
