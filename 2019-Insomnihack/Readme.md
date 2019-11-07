@@ -69,7 +69,7 @@ Final command to show the flag was ** cat -A flag 1>&0**
 
 # Skeleton in the closet
 
-https://download.scrt.local/insomnihack2019/SiC_8b47589556efae17471bbb768e25b525.zip
+https://download.scrt.ch/insomnihack2019/SiC_8b47589556efae17471bbb768e25b525.zip
 
 After searching a bit, we found the reference of the Skeleton Misc function of the well known Mimikatz of Benjamin Delpy.
 https://github.com/gentilkiwi/mimikatz  
